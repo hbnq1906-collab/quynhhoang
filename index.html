@@ -621,6 +621,63 @@ footer {
   font-size:.7rem; color:var(--muted); margin-top:.1rem;
 }
 
+/* ── CDP CONSULTING ── */
+.cdp-section { background:var(--black); position:relative; overflow:hidden; }
+.cdp-section::before {
+  content:''; position:absolute; left:-200px; top:10%;
+  width:600px; height:600px; pointer-events:none;
+  background:radial-gradient(circle, rgba(245,166,35,.07) 0%, transparent 70%);
+}
+.cdp-lead { color:var(--muted); max-width:720px; line-height:1.75; margin-top:.5rem; font-size:.95rem; }
+.cdp-lead strong { color:var(--white); font-weight:600; }
+.cdp-proof {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1px; margin-top:3rem;
+  border:1px solid var(--border); border-radius:12px; overflow:hidden;
+}
+.cdp-proof > div { background:var(--card); padding:1.6rem 1.8rem; }
+.cdp-num {
+  font-family:'Bebas Neue',sans-serif; font-size:2.6rem;
+  color:var(--amber); line-height:1; display:block;
+}
+.cdp-num-lbl { font-size:.78rem; color:var(--muted); line-height:1.5; margin-top:.4rem; }
+.cdp-sub {
+  font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--amber);
+  letter-spacing:.14em; text-transform:uppercase; margin:4rem 0 0;
+}
+.cdp-case {
+  margin-top:1.5rem; display:grid; grid-template-columns:1fr 1.3fr; gap:3rem;
+  border:1px solid var(--border); border-radius:12px; padding:2.5rem;
+  background:linear-gradient(135deg, rgba(245,166,35,.06), transparent 55%), var(--card);
+}
+.cdp-case-title {
+  font-family:'Bebas Neue',sans-serif; font-size:2rem; line-height:1.05;
+  letter-spacing:.01em; margin:.4rem 0 1rem;
+}
+.cdp-case-meta { font-size:.8rem; color:var(--muted); line-height:1.6; }
+.cdp-engage {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.5rem; margin-top:1.5rem;
+}
+.cdp-engage-card {
+  border:1px solid var(--border); border-radius:12px; padding:2rem;
+  background:var(--card); transition:border-color .25s, transform .25s;
+}
+.cdp-engage-card:hover { border-color:var(--amber); transform:translateY(-4px); }
+.cdp-engage-term {
+  font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--green);
+  letter-spacing:.06em; text-transform:uppercase; margin-top:1.2rem;
+}
+.cdp-cta { display:flex; flex-wrap:wrap; gap:1rem; margin-top:3rem; }
+/* journey CSS redefines .ai-tags as absolute; restore normal flow in card grids */
+.ai-section .ai-tags, .cdp-section .ai-tags { position:static; margin-top:1rem; }
+.ai-section .ai-tag, .cdp-section .ai-tag { opacity:1; animation:none; background:transparent; border-color:var(--border); color:var(--muted); }
+.thumb-cdp { background:linear-gradient(135deg,#2a1a05,#111 70%); }
+.co-axis { background:#2a1a05; color:#F5A623; border-color:#4a3510; }
+@media(max-width:900px){
+  .cdp-case { grid-template-columns:1fr; gap:1.5rem; padding:1.8rem; }
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(24px); }
@@ -651,6 +708,7 @@ footer {
   <ul class="nav-links">
     <li><a href="#journey">Journey</a></li>
     <li><a href="#ai">AI Stack</a></li>
+    <li><a href="#cdp">CDP Consulting</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -672,7 +730,8 @@ footer {
     </h1>
     <p class="hero-sub">
       Senior Marketing Leader with <strong>15+ years</strong> building high-performance marketing franchises across 
-      <strong>tech, finance, SaaS, and F&B</strong> — in Vietnam and international markets. 
+      <strong>tech, finance, SaaS, and F&B</strong> — in Vietnam and Canada. 
+      Most recently, I led an <strong>enterprise CDP transformation</strong> across banking, aviation and real estate. 
       I turn brands into growth engines and data into decisions, powered by AI from strategy to execution.
     </p>
     <div class="hero-actions">
@@ -705,12 +764,12 @@ footer {
       <div class="t-comment">// Senior Marketing Executive</div>
       <br>
       <div><span class="t-key">name</span>:       <span class="t-val">"Hoang Bao Nguyen Quynh"</span></div>
-      <div><span class="t-key">location</span>:   <span class="t-val">"Ho Chi Minh City 🇻🇳"</span></div>
-      <div><span class="t-key">intl_exp</span>:   <span class="t-val">"Canada 🇨🇦"</span></div>
+      <div><span class="t-key">location</span>:   <span class="t-val">"Ontario, Canada 🇨🇦"</span></div>
+      <div><span class="t-key">markets</span>:    <span class="t-val">"Vietnam 🇻🇳 · Canada 🇨🇦"</span></div>
       <div><span class="t-key">experience</span>: <span class="t-val">"15+ years"</span></div>
       <br>
       <div class="t-comment">// Core Stack</div>
-      <div><span class="t-key">strategy</span>:   <span class="t-green">"Brand · GTM · SaaS"</span></div>
+      <div><span class="t-key">strategy</span>:   <span class="t-green">"Brand · GTM · SaaS · CDP"</span></div>
       <div><span class="t-key">ai_tools</span>:   <span class="t-green">"Claude · GPT · Gemini"</span></div>
       <div><span class="t-key">team_size</span>:  <span class="t-green">"10–30+ people"</span></div>
       <br>
@@ -733,6 +792,7 @@ footer {
     <span class="m-item"><span>◆</span>Brand Strategy</span>
     <span class="m-item"><span>◆</span>Go-to-Market</span>
     <span class="m-item"><span>◆</span>AI-Powered Marketing</span>
+    <span class="m-item"><span>◆</span>CDP & Customer Data</span>
     <span class="m-item"><span>◆</span>SaaS Growth</span>
     <span class="m-item"><span>◆</span>B2B Pipeline</span>
     <span class="m-item"><span>◆</span>CRM & Lead Gen</span>
@@ -744,6 +804,7 @@ footer {
     <span class="m-item"><span>◆</span>Brand Strategy</span>
     <span class="m-item"><span>◆</span>Go-to-Market</span>
     <span class="m-item"><span>◆</span>AI-Powered Marketing</span>
+    <span class="m-item"><span>◆</span>CDP & Customer Data</span>
     <span class="m-item"><span>◆</span>SaaS Growth</span>
     <span class="m-item"><span>◆</span>B2B Pipeline</span>
     <span class="m-item"><span>◆</span>CRM & Lead Gen</span>
@@ -1803,11 +1864,120 @@ footer {
   </div>
 </section>
 
+<!-- CDP CONSULTING -->
+<section id="cdp" class="cdp-section">
+  <div class="s-eyebrow">Fractional CDP & Martech Consulting</div>
+  <h2 class="reveal">One Customer. One Data.<br><span style="color:var(--amber)">Measurable Growth.</span></h2>
+  <p class="cdp-lead reveal">
+    Most CDP projects don't fail because of technology. They fail because nobody connects the data to
+    <strong>real marketing use cases</strong> and to the decisions leadership cares about.
+    I've led an enterprise CDP program across a bank, a digital bank, an airline and a real-estate business.
+    I help <strong>banks, fintechs, credit unions and B2C brands</strong> turn scattered customer data into
+    activated, revenue-linked intelligence, without paying for a platform they won't use.
+  </p>
+
+  <div class="cdp-proof reveal">
+    <div><span class="cdp-num">4</span><div class="cdp-num-lbl">Business units in one CDP program: banking, digital bank, aviation and real estate</div></div>
+    <div><span class="cdp-num">~5M</span><div class="cdp-num-lbl">Customer profiles in the Phase 1 bank scope</div></div>
+    <div><span class="cdp-num">36M+</span><div class="cdp-num-lbl">Profiles on the group-wide roadmap to 2030</div></div>
+    <div><span class="cdp-num">6+</span><div class="cdp-num-lbl">Years leading marketing in banking (VIB, Eximbank)</div></div>
+  </div>
+
+  <div class="cdp-sub reveal">What I help with</div>
+  <div class="ai-grid" style="margin-top:1.5rem;">
+    <div class="ai-card reveal">
+      <div class="ai-icon">🧭</div>
+      <div class="ai-card-title">CDP Strategy & Readiness Audit</div>
+      <div class="ai-card-body">Assess data sources, identity resolution, consent and team maturity. You get a prioritized roadmap and a business case your board can approve.</div>
+      <div class="ai-tags"><span class="ai-tag">Roadmap</span><span class="ai-tag">Business Case</span></div>
+    </div>
+    <div class="ai-card reveal">
+      <div class="ai-icon">⚖️</div>
+      <div class="ai-card-title">Build vs. Buy & Vendor Selection</div>
+      <div class="ai-card-body">A neutral comparison of custom builds against Salesforce, Adobe and composable CDPs, covering requirements, BRD, RFP scoring and total cost of ownership.</div>
+      <div class="ai-tags"><span class="ai-tag">BRD</span><span class="ai-tag">RFP</span><span class="ai-tag">TCO</span></div>
+    </div>
+    <div class="ai-card reveal">
+      <div class="ai-icon">🎯</div>
+      <div class="ai-card-title">Use Cases & Activation</div>
+      <div class="ai-card-body">Segments, journeys and triggers tied to acquisition, cross-sell and retention KPIs, so the CDP earns revenue from day one instead of sitting idle.</div>
+      <div class="ai-tags"><span class="ai-tag">Segmentation</span><span class="ai-tag">Journeys</span></div>
+    </div>
+    <div class="ai-card reveal">
+      <div class="ai-icon">📊</div>
+      <div class="ai-card-title">Measurement & Executive Dashboards</div>
+      <div class="ai-card-body">Metric frameworks and board-ready dashboards with a headline, a diagnostic and a data-trust layer, so leadership trusts the numbers.</div>
+      <div class="ai-tags"><span class="ai-tag">KPI Framework</span><span class="ai-tag">BOD Reporting</span></div>
+    </div>
+  </div>
+
+  <div class="cdp-sub reveal">Featured engagement</div>
+  <div class="cdp-case reveal">
+    <div>
+      <div class="co-logo co-axis">AXIS GROUP</div>
+      <div class="cdp-case-title">Enterprise CDP<br>Transformation</div>
+      <div class="cdp-case-meta">Head of Martech · Sovico ecosystem, Vietnam<br>Banking · Digital Bank · Aviation · Real Estate</div>
+    </div>
+    <ul class="exp-bullets">
+      <li>Strategic and operational lead for a group-wide CDP program spanning <strong>HDBank, Vikki Bank, VietJet Air and Phú Long</strong></li>
+      <li>Shaped the <strong>"One Customer – One Data – One Growth"</strong> Marketing Intelligence Platform strategy (2026–2030)</li>
+      <li>Ran the <strong>build-vs-buy</strong> evaluation and the BRD verification workstream with IT and business teams</li>
+      <li>Designed an <strong>8-domain marketing metric framework</strong> and executive dashboard prototypes for the Board</li>
+      <li>Managed C-level and board-level stakeholders across four business units</li>
+    </ul>
+  </div>
+
+  <div class="cdp-sub reveal">Ways to work together</div>
+  <div class="cdp-engage">
+    <div class="cdp-engage-card reveal">
+      <div class="ai-card-title">CDP Readiness Audit</div>
+      <div class="ai-card-body">A fixed-scope diagnostic that ends with a roadmap and a business case.</div>
+      <div class="cdp-engage-term">2–3 weeks · Fixed fee</div>
+    </div>
+    <div class="cdp-engage-card reveal">
+      <div class="ai-card-title">Fractional CDP / Martech Lead</div>
+      <div class="ai-card-body">I act as your program lead through vendor selection, implementation and the first activations.</div>
+      <div class="cdp-engage-term">Monthly retainer</div>
+    </div>
+    <div class="cdp-engage-card reveal">
+      <div class="ai-card-title">Advisory</div>
+      <div class="ai-card-body">A senior sounding board for your CMO, CDO or project team.</div>
+      <div class="cdp-engage-term">Hourly · Block of hours</div>
+    </div>
+  </div>
+
+  <div class="cdp-cta reveal">
+    <a href="mailto:hbnq1906@gmail.com?subject=CDP%20consulting%20enquiry" class="btn-fill">Book a Discovery Call →</a>
+    <a href="#portfolio" class="btn-ghost">See My Work ↓</a>
+  </div>
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio" class="portfolio-section">
   <div class="s-eyebrow">AI Projects & Portfolio</div>
   <h2 class="reveal">Things I've<br><span style="color:var(--amber)">Built & Led.</span></h2>
   <div class="portfolio-grid">
+
+    <div class="p-card reveal">
+      <div class="p-card-thumb thumb-cdp">
+        <span class="emoji">🧬</span>
+        <div class="p-badge">Head of Martech</div>
+      </div>
+      <div class="p-card-body">
+        <div class="p-tags">
+          <span class="p-tag">CDP</span>
+          <span class="p-tag">Banking · Aviation · Real Estate</span>
+          <span class="p-tag">Vietnam</span>
+        </div>
+        <div class="p-title">Axis Group: Enterprise CDP Transformation</div>
+        <p class="p-desc">A group-wide Customer Data Platform program across HDBank, Vikki Bank, VietJet Air and Phú Long. I owned the strategy, the build-vs-buy decision, BRD verification, the metric framework and the executive dashboards.</p>
+        <div class="p-metrics">
+          <div class="p-metric">~5M profiles in Phase 1 scope</div>
+          <div class="p-metric">Roadmap to 36M+ profiles by 2030</div>
+          <div class="p-metric">8-domain metric framework + BOD dashboards</div>
+        </div>
+      </div>
+    </div>
 
     <div class="p-card reveal">
       <div class="p-card-thumb-img">
@@ -1946,6 +2116,23 @@ footer {
   <h2 class="reveal">15 Years<span style="color:var(--amber)">+</span></h2>
 
   <div class="exp-timeline">
+
+    <div class="exp-item reveal">
+      <div><div class="exp-period">2026</div></div>
+      <div>
+        <div class="exp-dot"></div>
+        <div class="co-logo co-axis">AXIS GROUP</div>
+        <div class="exp-company">Axis Group (Sovico Ecosystem)</div>
+        <div class="exp-meta">Head of Martech · HCMC</div>
+        <ul class="exp-bullets">
+          <li>Led an <strong>enterprise CDP transformation</strong> across HDBank, Vikki Bank, VietJet Air and Phú Long</li>
+          <li>Phase 1 bank scope of <strong>~5M profiles</strong>, with a roadmap to <strong>36M+</strong> across the ecosystem by 2030</li>
+          <li>Built the Marketing Intelligence Platform strategy (2026–2030) and ran the build-vs-buy evaluation</li>
+          <li>Designed the metric framework and executive dashboards for the Board</li>
+        </ul>
+        <div class="exp-chips"><span class="exp-chip">CDP</span><span class="exp-chip">Martech</span><span class="exp-chip">Data Strategy</span><span class="exp-chip">BOD Reporting</span></div>
+      </div>
+    </div>
 
     <div class="exp-item reveal">
       <div>
@@ -2092,6 +2279,16 @@ footer {
       </ul>
     </div>
     <div class="skill-group reveal">
+      <div class="sg-title">Data & Martech</div>
+      <ul class="sg-list">
+        <li>CDP Strategy & Roadmap</li>
+        <li>Build vs. Buy · Vendor Selection</li>
+        <li>BRD & Requirements</li>
+        <li>Customer 360 & Segmentation</li>
+        <li>Executive Dashboards & KPIs</li>
+      </ul>
+    </div>
+    <div class="skill-group reveal">
       <div class="sg-title">Leadership</div>
       <ul class="sg-list">
         <li>Team Leadership (10–30+ people)</li>
@@ -2119,6 +2316,7 @@ footer {
         <li>Automotive (VinFast)</li>
         <li>F&B (Burger King, Dunkin' …)</li>
         <li>Healthcare & HRTech</li>
+        <li>Aviation & Real Estate</li>
       </ul>
     </div>
     <div class="skill-group reveal">
@@ -2140,8 +2338,8 @@ footer {
   <div class="s-eyebrow" style="justify-content:center;">Let's Connect</div>
   <h2 class="reveal">Let's Build<br>Something <em>Great.</em></h2>
   <p class="contact-sub reveal">
-    Open to senior marketing leadership roles, fractional CMO engagements, 
-    or AI-driven growth partnerships — Vietnam and international.
+    Open to senior marketing leadership roles, fractional CMO and 
+    CDP / Martech consulting engagements, or AI-driven growth partnerships — Canada, North America and Vietnam.
   </p>
   <div class="contact-grid reveal">
     <a href="mailto:hbnq1906@gmail.com" class="c-link fill">✉ Email Me</a>
@@ -2150,7 +2348,7 @@ footer {
   </div>
 </section>
 
-<footer>© 2026 Hoang Bao Nguyen Quynh · Ho Chi Minh City, Vietnam</footer>
+<footer>© 2026 Hoang Bao Nguyen Quynh · Ontario, Canada</footer>
 
 <script>
 // Custom cursor
